@@ -1,0 +1,31 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   ifstream file; //for operations in files
+   string filename;
+   string word;
+   int count=0;
+   
+   cout << "Enter your filename";
+   cin >> filename; //to take filename input from user
+   
+   file.open(filename); //opening file
+   
+   while(!file.eof()) //check whether file is empty
+   {
+       file >> word;
+       count++; //counting no of words
+   }
+   
+ 
+   cout << "word count = " << count;
+   
+   file.close(); //closing file
+
+    return 0;
+}
